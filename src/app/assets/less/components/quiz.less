@@ -1,0 +1,178 @@
+.area-header {
+      line-height: 3rem;
+      overflow: hidden;
+      background-color: white;
+      padding: 0 1rem 0 16rem;
+      .name {
+        float: left;
+        font-size: 1.5rem;
+        display: inline-block;
+        width: 100%;
+        color: @table-color;
+      }
+      .create {
+        float: right;
+        background-color: @table-color;
+        border-radius: .1rem;
+        color: white;
+        padding: 0 1rem;
+        cursor: pointer;
+        box-shadow: inset 0px 0px 5px fade(@table-invers-color, 50%);
+        &:hover {
+          box-shadow: inset 0px 0px 5px fade(@table-invers-color, 100%);
+        }
+      }
+    }
+.toolbar {
+    float: left;
+    width: 15rem;
+        margin-top: .25rem;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+          width: 100%;
+      li {
+        line-height: 2.5rem;
+        text-align: left;
+        & span { 
+          cursor: pointer;
+          padding-left: 2rem;
+          text-shadow: 1px 1px 4px #00000038;
+        }
+        &:hover {
+          background-color: fade(@table-color, 20%);
+        }
+        &.selected {
+          background-color: fade(@table-invers-color, 50%);
+          font-weight: bold;
+          ul {
+            display: block;
+          }
+        }
+        ul {
+          display: none;
+          margin-bottom: .5rem;
+          font-size: 95%;
+          li {
+            font-weight: normal;
+            padding-left: 1rem;
+          }
+        }
+        
+      }
+    }
+  }
+table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .material-icons {
+      vertical-align: inherit;
+      font-size: 1.75rem;
+      cursor: pointer;
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    th, td {
+        padding: 8px;
+        text-align: right;
+    }
+    th:last-child {
+      opacity: 0;
+    }
+    td:first-child, th:first-child {
+        text-align: left;
+        font-weight: 600;
+      }
+    thead tr {
+      line-height: 3rem;
+      background-color: fade(@table-color, 55%);
+      color: aliceblue;
+    }
+    tr {
+      line-height: 2.5rem;
+      border-width: 0px 0px 2px 0px;
+      border-color: fade(@edit-border, 0%);
+      border-style: solid;
+    }
+    tbody tr:nth-child(even){
+      background-color: fade(@table-color, 55%);
+      color: aliceblue;
+    }
+    tbody tr:hover{
+      border-color: @table-color;
+}
+.info-board {
+    padding: 1rem 0;
+    margin: .25rem 0;
+    background-color: #fafeffb5;
+    .entries {
+      line-height: 3rem;
+      text-align: left;
+      font-size: 1.1rem;
+      font-style: oblique;
+      padding: 0 1rem;
+      &:nth-child(even){
+        background-color: fade(@table-color, 40%);
+        color: aliceblue;
+        span {
+          color: aliceblue;
+        }
+      }
+      span {
+        float: right;
+        width: 70%;
+        font-style: normal;
+      }
+    }
+  }
+
+.overview {
+    max-width: 35rem;
+    margin: 0 auto;
+    .title {
+      line-height: 3rem;
+      font-size: 1.25rem;
+      color: @edit-board-title-color;
+    }
+    .content {
+      width: 100%;
+      border-width: 0px 0px 2px 0px;
+      border-color: rgba(68, 45, 68, 0);
+      border-style: solid;
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      border-radius: 0px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      outline: rgba(30, 24, 33, 0);
+      color: white;
+      padding: 1rem;
+      margin-bottom: 3rem;
+    }
+    .answers {
+      padding-left: 4rem;
+      margin-top: 4rem;
+      .answer {
+        margin-bottom: 4rem;
+        .correct {
+          width: 2rem;
+          height: 2rem;
+          padding: .5rem;
+          background-color: rgba(197, 186, 204, 0.45);
+          display: block;
+          margin-left: -4rem;
+          margin-bottom: -3.25rem;
+          -webkit-box-shadow: inset 0px 0px 5px #060505b8, 1px 1px 1px #002d2966;
+          box-shadow: inset 0px 0px 5px #060505b8, 1px 1px 1px #002d2966;
+          border: 0.5rem solid #bcc7c7;
+          &.correct-answer {
+            background-color: @check-color;
+          }
+        }
+      }
+    }
+  }

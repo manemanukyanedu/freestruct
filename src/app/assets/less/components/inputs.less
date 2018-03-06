@@ -1,0 +1,72 @@
+.edit-board {
+	width: @edit-board-width;
+	margin: 0rem auto;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    &.seperated {
+      border-bottom: 1px solid fade(@edit-border, 30%);
+    }
+    .title {
+      line-height: @input-button-line-height;
+      font-size: @edit-board-title-font;
+      color: @edit-board-title-color;
+      &.required::after {
+      	padding: 0 .5rem;
+      	content: '*';
+        color: @error-text-color;
+      	vertical-align: sub;
+      }
+    }
+    .editable {
+    	width: 100%;
+		  .input-button;
+	    text-align: center;
+	    border-radius: 0px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+	    outline: fade(@edit-outline, 0%);
+      color: @input-text-color;
+      .placeholder({
+        color: fade(white, 85%);
+      });
+	}
+  .help.is-danger {
+    color: @error-back-color;
+    padding: .5rem 0;
+    display: inline-block;
+  }
+	.input-height {
+		line-height: @input-button-line-height;
+	}
+  .textarea {
+    height: @textarea-height;
+    text-align: left;
+    padding: .5rem 1rem;
+  }
+	.input-font {
+	    font-style: oblique;
+	}
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+  .checkbox-label {
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    background-color: fade(#c5bacc, 45%);
+    display: block;
+    margin-top: -2.5rem;
+    box-shadow: inset 0px 0px 5px #060505b8, 1px 1px 1px #002d2966;
+    border: .5rem solid @checkbox-border-color;
+  }
+  .checkbox-input {
+    margin-top: -1rem;
+    display: block;
+    opacity: 0;
+    &:checked + .checkbox-label {
+      background-color: @check-color;
+
+    } 
+  }
+   
+}

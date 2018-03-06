@@ -1,0 +1,79 @@
+.smooter {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: @smooter-back-color;
+  z-index: 1;
+  .modal-board {
+    position: absolute;
+    margin: calc(30vh - 6rem) calc(50vw - 14rem) ;
+    width: 28rem;
+    height: auto;
+    min-height: 12rem;
+    overflow: hidden;
+    border-radius: 1px;
+    background-color: #eef7f7e8;
+    box-shadow: #35353587 1px 1px 10px;
+    .closer {
+      position: absolute;
+      top: 0;
+      font-size: 2rem;
+      padding: .5rem;
+      border-radius: 50%;
+      right: 0;
+      border: 1px solid;
+      color: @error-color;
+      margin: .1rem;
+      opacity: .5;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    .title {
+      padding: .15rem;
+      margin-bottom: 1rem;
+      min-height: 3.5rem;
+      & span {
+        display: block;
+      }
+      .d-title {
+        font-size: @dialogue-board-title-font;
+        line-height: @input-button-line-height;
+      }
+    }
+    .message {
+        font-size: @edit-board-title-font;
+        padding: 1.25rem;
+    display: block;
+        &::after {
+          content: '';
+        }
+      }
+    &.error .title, &.error h1 {
+      margin: 0;
+      color: @error-color;
+      background: @error-back-color;
+    }
+    &.confirm .title, &.info .title {
+      overflow: hidden;
+      width: 28rem;
+      background-color: #5e2177;
+      color: fade(@input-text-color, 90%);
+    }
+    .details {
+      font-size: 1rem;
+      display: block;
+      padding: 1rem;
+      text-align: left;
+      &::before {
+        padding: 0 .5rem;
+        content: '*';
+        vertical-align: sub;
+        color:@error-back-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+html {
+    width: 100%;
+    min-height: 100vh;
+    font-family: @base-font;
+    .smooting();
+    color: @base-color;
+    .background-order-advanced(center bottom, cover, no-repeat, fixed, url(../../images/backgrounds/back.jpg));
+    body {
+      min-height: 100vh;
+      margin: 0;
+      /*overflow: hidden;*/
+      .free-struct {
+        text-align: center;
+        .pres {
+          width: 100%;
+          padding-top: 5.5rem;
+        }
+      }
+    }
+}
+.navbar {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    background-color: fade(@navbar-back-color, 80%);
+    &.no-alfa {
+      background-color: @navbar-back-color;
+    }
+    ul {
+      .ul-no-style;
+      padding: 1.5rem;
+      float: right;
+      li {
+        display: inline-block;
+        margin: 0 1rem 0 0;
+        border-right: .025rem solid  @navbar-font-color;
+        &:last-child {
+          border: none;
+        }
+        a {
+          color: @navbar-font-color;
+          text-decoration: none;
+          font-family: unset;
+          line-height: 1.5rem;
+          padding: .25rem 1.35rem .25rem 0;
+          text-transform: uppercase;
+          display: inline-block;
+          font-size: .85rem;
+        }
+      }
+    }
+    img {
+      max-width: 10rem;
+      float: left;
+      margin: 0 2rem;
+    }
+}
+.input-button {
+  border-width: 0px 0px 2px 0px;
+  border-color: fade(@edit-border, 0%);
+  border-style: solid;
+  background-color: @edit-background;
+  &:focus, &:hover {
+    border-color: @edit-border;
+  }
+  &:disabled {
+    background-color: fade(@edit-background, 15%);
+    cursor: default;
+    border-color: transparent;
+  }
+}
+  
+  
+  
+  

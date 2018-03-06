@@ -1,0 +1,98 @@
+.board {
+    padding:  0;
+    max-width: 64rem;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 2px;
+    background-color: fade(@board-back, 90%);
+    box-shadow: fade(#353535, 50%) 1px 1px 10px;
+  }
+  .dashboard {
+      background-color: #020f15d1;
+      color: aliceblue;
+      ul {
+        text-align: left;
+        list-style: none;
+        overflow: hidden;
+        li {
+          float: left;
+          line-height: 3rem;
+          padding: 0 1rem;
+          cursor: pointer;
+          &:hover, &.selected {
+            background-color: #eef7f7e8;
+            color: #020f15d1;
+          }
+        }
+      }
+  }
+  .path {
+    ul {
+        text-align: left;
+        list-style: none;
+        li {
+          display: inline-block;
+          line-height: 2rem;
+          cursor: pointer;
+          i {
+            font-size: 1.25rem;
+            vertical-align: bottom;
+            line-height: 2rem;
+            display: inline-block;
+            margin: 0 .25rem;
+          }
+        }
+      }
+  }
+  .tools {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    .tool {
+            padding: 1rem;
+            background-color: #f0f8ffa8;
+            box-shadow:  2px 2px 5px #0000002e;
+            margin: .5rem;
+            flex: 0 0 20rem;
+      h2 {
+        font-size: 1.5rem;
+          min-width: 60%;
+          color: @page-title-color;
+        img {
+
+        }
+      }
+      p {
+        text-align: left;
+          padding: .5rem 0;
+          color: #343e3beb;
+          &:first-letter {
+            margin-left: 1.5rem;
+          }
+      }
+    }
+  }
+  .working-area {
+    padding-left: 16rem;
+    .decore-hld {
+      width: 100%;
+      position: relative;
+      .decore {
+        width: 1px;
+        height: 100vh;
+        background: fade(@board-invers-back, 25%);
+        position: absolute;
+      }
+    }
+    .scrollable {
+      width: 105%;
+      max-height: 70vh;
+      padding-right: 5%;
+      overflow-y: auto;
+    }
+  }
+  .views {
+    overflow: hidden;
+  }
